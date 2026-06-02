@@ -1,0 +1,4 @@
+name: endeavor
+type: duckdb
+options:
+  filename: ../../endeavor_tea_works.duckdb

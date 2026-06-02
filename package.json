@@ -1,0 +1,16 @@
+{
+  "name": "endeavor-takehome",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "evidence build",
+    "build:strict": "evidence build:strict",
+    "dev": "evidence dev",
+    "sources": "evidence sources"
+  },
+  "devDependencies": {
+    "@evidence-dev/core-components": "^5.0.0",
+    "@evidence-dev/evidence": "^40.0.0",
+    "@evidence-dev/duckdb": "^1.0.4"
+  }
+}
