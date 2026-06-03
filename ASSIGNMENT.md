@@ -1,4 +1,4 @@
-# Junior Data Engineer — Take-Home Assignment
+# Data Engineer — Take-Home Assignment
 
 Welcome, and thanks for taking the time to work through this. This exercise is designed to give us a clear, fair look at how you think about data, write SQL, and communicate findings — and to give you a realistic feel for the kind of work you'd do on the team.
 
@@ -18,7 +18,7 @@ If something is genuinely blocking you (the data file won't open, the dev server
 
 ### Getting the data
 
-1. Download the dataset zip (~670 MB): **[PLACEHOLDER: Google Drive link]**
+1. Download the dataset zip (~670 MB): [endeavor_tea_works.duckdb.zip](https://drive.google.com/file/d/1jdqSToAAcLWJsO70d3zOoHJ8OUT8cntd/view?usp=sharing)
 2. Unzip. You'll get `endeavor_tea_works.duckdb` (~2.3 GB on disk).
 3. Place it somewhere convenient. From here on we'll assume it lives at `./endeavor_tea_works.duckdb`.
 
