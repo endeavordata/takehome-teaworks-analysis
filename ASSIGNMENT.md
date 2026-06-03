@@ -344,7 +344,7 @@ Submit the entire starter repo, zipped — or push to a private GitHub repo and 
 
 If there's anything we need to know to run your submission, add a brief note to the starter repo's `README.md`.
 
-Email the zip or repo link to **[PLACEHOLDER: hiring email]**.
+Email the zip or repo link to **nathan@endeavorlabs.co**.
 
 ---
 
