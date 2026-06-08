@@ -269,13 +269,13 @@ Deliverables:
 
 ### Part C — Recall traceability (~90 minutes)
 
-Endeavor's QA team has flagged a quality issue: a contamination concern in **Darjeeling raw material received between September 1 and October 31, 2022** (raw tea sourced from India). They need to identify all customers who received finished products made with the affected material so they can issue notifications.
+Endeavor's QA team has flagged a quality issue: a retained sample from a received **Darjeeling raw-material lot — vendor lot code `002-22-069974`** (raw tea sourced from India, received September 2022) tested above EU pesticide limits. They need to identify all customers who received finished products made with that lot so they can issue notifications.
 
-Trace the lineage from raw material through to customers, step by step:
+Trace the lineage from that raw-material lot through to customers, step by step:
 
-**C1.** Identify the affected **vendor lots** — Darjeeling raw material (use `materials.origin` or `materials.name` to find Darjeeling) received in the date window. Report `lot_id`, `vendor_lot_code`, `material_id`, `material_name`, and `received_at`.
+**C1.** Confirm the affected **vendor lot**. Look up lot code `002-22-069974` in `lots` and verify it is Darjeeling raw material (use `materials.origin` or `materials.name`). Report `lot_id`, `vendor_lot_code`, `material_id`, `material_name`, and `received_at`. *(Context: real recalls are lot-specific. Endeavor receives many Darjeeling lots in any given window — note for yourself roughly how many arrived in Sep–Oct 2022 — which is why QA scopes this to a single lot code, not a date range.)*
 
-**C2.** Identify the **production runs** that consumed those vendor lots (via `production_inputs.lot_id`). Report `run_id`, `target_product_id`, `target_product_name`, `started_at`, `completed_at`, `actual_qty`.
+**C2.** Identify the **production runs** that consumed that vendor lot (via `production_inputs.lot_id`). Report `run_id`, `target_product_id`, `target_product_name`, `started_at`, `completed_at`, `actual_qty`.
 
 **C3.** Identify the **finished-product lots** produced by those runs (via `production_outputs`). Report `lot_id`, `product_id`, `product_name`, `qty_produced`.
 
