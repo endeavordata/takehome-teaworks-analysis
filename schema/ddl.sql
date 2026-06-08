@@ -248,5 +248,6 @@ CREATE TABLE endeavor_tea_works.main.inventory_movements (
     movement_type    VARCHAR NOT NULL,  -- receive, putaway, pick, transfer, ship, adjust
     qty              DECIMAL(14, 4) NOT NULL,
     occurred_at      TIMESTAMP NOT NULL,
-    task_id          BIGINT REFERENCES endeavor_tea_works.main.tasks(task_id)
+    task_id          BIGINT REFERENCES endeavor_tea_works.main.tasks(task_id),
+    so_id            BIGINT REFERENCES endeavor_tea_works.main.sales_orders(so_id)  -- populated for 'ship' rows; bridges a shipped lot to its sales order/customer
 );
