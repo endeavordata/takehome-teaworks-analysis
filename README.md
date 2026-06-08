@@ -1,10 +1,10 @@
 # Endeavor Tea Works — Take-Home Starter Repo
 
-This is the starter repo for the Endeavor data engineer take-home assignment.
+This is the starter repo for the Endeavor Labs data engineer take-home assignment.
 
 **👉 Read [`ASSIGNMENT.md`](./ASSIGNMENT.md) first — that's the full brief.**
 
-It walks you through setup, the company context, the data model, and the actual tasks. Plan for about 5 hours.
+It walks you through setup, the company context, the data model, and the actual tasks. Plan for about 3–4 hours. AI assistance (we recommend Claude Code) is strongly encouraged — see the "Using AI" section in the brief.
 
 ---
 

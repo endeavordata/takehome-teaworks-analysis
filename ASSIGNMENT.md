@@ -2,9 +2,27 @@
 
 Welcome, and thanks for taking the time to work through this. This exercise is designed to give us a clear, fair look at how you think about data, write SQL, and communicate findings — and to give you a realistic feel for the kind of work you'd do on the team.
 
-**Plan for about 5 hours total.** You may spend more if you want, but please don't feel obligated. We'd much rather see three parts done well than five parts done sloppily — partial submissions are explicitly fine, and we will tell you up front: *finishing everything is not the bar.* What matters is that what you do submit is correct, readable, and honestly described.
+**Plan for about 3–4 hours total.** You may spend more if you want, but please don't feel obligated. AI assistance is encouraged (see "Using AI" below), so the SQL itself can go quickly — we'd rather you spend your time understanding the data, sanity-checking outputs, and forming your own conclusions than grinding through syntax. We'd much rather see three parts done well than five done sloppily — partial submissions are explicitly fine, and we'll say it up front: *finishing everything is not the bar.* What matters is that what you submit is correct, readable, honestly described — and that you can explain it. *(The per-part time estimates below are rough and "by the book," pre-AI; with AI you'll likely move faster.)*
 
 If something is genuinely blocking you (the data file won't open, the dev server won't start, a question is ambiguous in a way you can't resolve) — email us. Don't burn an hour stuck.
+
+---
+
+## Using AI on this assignment
+
+**AI assistance is strongly encouraged** — we use Claude every day at Endeavor Labs, and we want to see how you work *with* it. We recommend the **Claude Code CLI**, and we've included a Claude credit with this assignment to cover it. You're welcome to use other tools (Cursor, ChatGPT, etc.) if you prefer — use whatever makes you effective.
+
+Here's the important part: Claude can produce most of this output quickly. **That's fine — and it's exactly why the bar isn't the output.** In a follow-up conversation we'll walk through your submission together: why you made the choices you did, how you validated the numbers, and we'll likely ask you to write or modify a query live. Work you can't explain won't survive that conversation. So treat the AI as a fast pair-programmer, not an oracle: read what it gives you, check it against the data, and make the conclusions your own. Think each question through — "hey Claude, do this assignment" is not the assignment.
+
+To get started with Claude Code, install it and run `claude` from the repo root:
+
+```bash
+# macOS / Linux / WSL
+curl -fsSL https://claude.ai/install.sh | bash
+# or via npm: npm install -g @anthropic-ai/claude-code
+```
+
+On first run it'll prompt you to sign in. Claude Code runs in your terminal and can drive the DuckDB CLI (which you install in Setup) to explore the database for you; you can also wire up a DuckDB MCP server if you prefer. See [code.claude.com/docs](https://code.claude.com/docs) for setup and docs.
 
 ---
 
@@ -289,14 +307,18 @@ Use any chart types you think communicate well. Keep it clean and readable — a
 
 ### Part D2 — Operations dashboard (~60 minutes)
 
-You're the new data engineer at Endeavor. The VP of Supply Chain wants a weekly operations dashboard. There is no specific brief — she trusts you to pick what matters.
+You're the new data engineer at Endeavor. The VP of Supply Chain wants a weekly operations dashboard. There's no rigid brief, but she's given you some color on what keeps her up at night:
+
+> "Two things blindside me: wholesale orders that ship late, and raw-material stockouts that stall production. I want to catch problems about a week before they blow up — and I open this every Monday morning."
+
+Use that to anchor your choices, but you own the specifics: how you define "late" or "stockout risk," which metrics best serve a *weekly* view, and what else (if anything) belongs alongside them. There's no single right answer — we grade the relevance of what you choose, the correctness of the SQL behind it, and how clearly you present it.
 
 Build a one-page Evidence.dev dashboard at `pages/ops.md`. Constraints:
 - One row of 4 KPI tiles.
 - 3–4 charts of your choice.
 - A short opening paragraph (2–3 sentences) explaining what this dashboard is for and why you chose what you chose.
 
-Pick metrics you think a supply chain VP would actually want to see weekly. Don't try to cover everything — pick the few that matter most and present them well. We're grading judgment more than polish here, but unreadable polish-free dashboards won't score well either.
+Don't try to cover everything — pick the few things that matter most and present them well. We're grading judgment more than polish, but an unreadable dashboard won't score well either.
 
 ### The writeup (~30 minutes)
 
@@ -307,8 +329,9 @@ A single markdown file: `writeup.md` in the starter repo. **Maximum 400 words.**
 - **Assumptions and caveats:** what choices did you make where the question was ambiguous? What would you double-check before sending these numbers to a stakeholder?
 - **Data quality notes:** did you find anything in the data that surprised you, looked off, or that you'd want to flag? (One or two items is plenty. "I didn't find anything" is a fine answer if it's honest.)
 - **What I'd do with more time:** brief.
+- **How you used AI** (2–3 sentences): where it helped, and at least one place where it was wrong, incomplete, or you overrode it. We're not testing *whether* you used AI — we're testing whether you were driving.
 
-We read this carefully. Clarity here matters as much as the SQL.
+We read this carefully — write it in your own voice; this should read like you, not like model output. The assumptions, data-quality, and AI-use notes are where we see whether you actually engaged with the data. Clarity here matters as much as the SQL.
 
 ### The modeling question (~10 minutes)
 
@@ -365,7 +388,7 @@ We do **not** score on:
 - Whether your SQL is one elegant query vs. several straightforward ones. Straightforward and correct beats clever and wrong.
 - Use of any specific dialect features.
 
-We will follow up with a 30-minute conversation to walk through your submission together. That's where you'll get to talk about choices, things you'd do differently, and anything you wanted to try but didn't have time for.
+We will follow up with a conversation to walk through your submission together. That's where you'll talk about choices, things you'd do differently, and anything you wanted to try but didn't have time for — and where we'll ask you to walk through your SQL and likely write or tweak a query live. Submitting work you can explain and own is the whole point.
 
 ---
 
